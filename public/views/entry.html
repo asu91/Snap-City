@@ -1,13 +1,16 @@
-<div class='jumbotron text-center'>
+<div class='jumbotron text-center header'>
   <h3>ENTER STATS</h3>
-  <form ng-submit='incrementNumber()'>
-    <select name='lifts'>
+  <form ng-submit='incrementNumber() ; number.deadlift=""'>
+    <!-- <select name='lifts'>
       <option value='squat'>SQUAT</option>
       <option value='bench'>BENCH</option>
       <option value='deadlift'>DEADLIFT</option>
-    </select>
+    </select> -->
     <input type='number' placeholder='ENTER NUMBER' ng-model='number.deadlift'>
   </form>
-  <span >Total Volume: {{ total }} lbs</span>
+  <form type='button'>
+  <span ng-model='totalVol'>Total Volume: {{ total }} lbs</span>
+  </form>
+  <button ng-click='pushVol(); total=0'>Submit Workout</button>
     <!-- <button>Submit</button> -->
 </div>
