@@ -1,5 +1,6 @@
 var Entry = require('./models/entry');
 var Q = require('q');
+var http = require('http');
 
 var createEntry = Q.nbind(Entry.create, Entry);
 var findAllEntries = Q.nbind(Entry.find, Entry);
@@ -26,6 +27,8 @@ module.exports = function(app) {
       })
 
   })
+
+
 
 
   app.get('*', function(req, res){

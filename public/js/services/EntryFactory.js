@@ -23,6 +23,18 @@ angular.module('mvp.factory', [])
       return $http.delete('/api/entry', id);
     };
 
+    var getQuote = function(){
+      console.log('helloooooo')
+      return $http({
+        method: 'GET',
+        url: 'http://api.forismatic.com/api/1.0/'
+        }).then(function(res){
+          console.log("we came backkk", res);
+          res.status = 200;
+          return res;
+        })
+    };
+
     // var chartData={
     //   "type":"area",  // Specify your chart type here.
     //   "series":[  // Insert your series data here.
@@ -34,7 +46,8 @@ angular.module('mvp.factory', [])
     return {
       get: get,
       create: create,
-      erase: erase
+      erase: erase,
+      getQuote: getQuote
     };
     
   });
