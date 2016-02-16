@@ -1,6 +1,8 @@
 <div class='jumbotron text-center'>
   <h3> 
-    {{ numbers }}
+    <div ng-repeat='number in numbers'>
+      {{ number.deadlift }}
+    </div>
   </h3>
 
 </div>

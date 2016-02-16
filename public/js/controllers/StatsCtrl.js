@@ -6,7 +6,7 @@ angular.module('mvp.statsCtrl',[])
       EntryFactory.get()
         .then(function(resp){
           console.log(resp.data, '<-----respdata')
-          $scope.numbers = resp
+          $scope.numbers = resp.data
         })
         .catch(function(err){
           console.error(err);
