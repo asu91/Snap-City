@@ -12,6 +12,7 @@ angular.module('mvp.factory', [])
     };
 
     var create = function(entryData){
+      console.log(entryData, '<---entryData')
       return $http.post('/api/entry', entryData);
     };
 
