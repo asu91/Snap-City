@@ -23,19 +23,18 @@ angular.module('mvp.factory', [])
       return $http.delete('/api/entry', id);
     };
 
-    var chartData={
-      "type":"area",  // Specify your chart type here.
-      "series":[  // Insert your series data here.
-          { "values": [35, 42, 67, 89]},
-          { "values": [28, 40, 39, 36]}
-      ]
-    };
+    // var chartData={
+    //   "type":"area",  // Specify your chart type here.
+    //   "series":[  // Insert your series data here.
+    //       { "values": [35, 42, 67, 89]},
+    //       { "values": [28, 40, 39, 36]}
+    //   ]
+    // };
 
     return {
       get: get,
       create: create,
-      erase: erase,
-      chartData: chartData
+      erase: erase
     };
     
   });
