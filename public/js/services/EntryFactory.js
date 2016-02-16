@@ -13,7 +13,10 @@ angular.module('mvp.factory', [])
 
     var create = function(entryData){
       console.log(entryData, '<---entryData')
-      return $http.post('/api/entry', entryData);
+      return $http.post('/api/entry', entryData)
+        .then(function(){
+          console.log('SUCCESS!!')
+        })
     };
 
     var erase = function(id){

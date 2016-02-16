@@ -13,9 +13,10 @@ module.exports = function(app) {
     });
   });
 
-  app.post('api/entry', function(req, res) {
+  app.post('/api/entry', function(req, res, next) {
     console.log(req.body, 'this is the body')
-    
+    res.send();
+
   })
 
 

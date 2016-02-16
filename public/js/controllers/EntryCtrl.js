@@ -3,7 +3,7 @@ angular.module('mvp.entryCtrl',[])
     $scope.tagline = 'HI THERE';
     $scope.number = {};
     $scope.postNumber = function(){
-      // EntryFactory.create($scope.number);
+      EntryFactory.create($scope.number);
       console.log('triggers')
     }
   });
