@@ -2,7 +2,13 @@ angular.module('mvp.factory', [])
   .factory('EntryFactory', function($http){
 
     var get = function(){
-      return $http.get('/api/entry');
+      return $http.get('/api/entry', function(req, res){
+        if(err){
+          console.error(err);
+        } else {
+          res.json(req.body);
+        }
+      });
     };
 
     var create = function(entryData){
