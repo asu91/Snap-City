@@ -1,10 +1,12 @@
 <div class='jumbotron text-center'>
   <h3>ENTER STATS</h3>
-  <select name='lifts'>
-    <option value='squat'>SQUAT</option>
-    <option value='bench'>BENCH</option>
-    <option value='deadlift'>DEADLIFT</option>
-  </select>
-  <input type='text' placeholder='RECORD YOUR LIFT..'>
-    <button>Submit</button>
+  <form ng-submit=''>
+    <select name='lifts'>
+      <option value='squat'>SQUAT</option>
+      <option value='bench'>BENCH</option>
+      <option value='deadlift'>DEADLIFT</option>
+    </select>
+    <input type='text' placeholder='RECORD YOUR LIFT..'>
+      <button>Submit</button>
+  </form>
 </div>
