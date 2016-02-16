@@ -1,5 +1,5 @@
 body {
-  background: url('img/maxresdefault.jpg') no-repeat center center fixed;
+  background: url('img/gym.jpg') no-repeat center center fixed;
   background-size: cover;
 
 }
@@ -12,4 +12,9 @@ img {
 
 .header {
   opacity: 0.9;
+}
+
+.bar {
+  background-color: white;
+  opacity: .8
 }
