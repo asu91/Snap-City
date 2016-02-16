@@ -4,9 +4,9 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
-var db = require('./config/db');
+// var db = require('./config/db');
 
-mongoose.connect(db.url);
+mongoose.connect('mongodb://localhost/MVP');
 
 
 app.use(bodyParser.json());
