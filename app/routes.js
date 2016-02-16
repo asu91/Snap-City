@@ -13,6 +13,11 @@ module.exports = function(app) {
     });
   });
 
+  app.post('api/entry', function(req, res) {
+    console.log(req.body, 'this is the body')
+    
+  })
+
 
   app.get('*', function(req, res){
     res.sendfile('./public/index.html');
