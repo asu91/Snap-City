@@ -1,5 +1,5 @@
 body {
-  background: url('img/gym.jpg') no-repeat center center fixed;
+  background: url('img/gym2.jpg') no-repeat center center fixed;
   background-size: cover;
 
 }
@@ -17,4 +17,14 @@ img {
 .bar {
   background-color: white;
   opacity: .8
+}
+
+.login {
+  float: right;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
 }

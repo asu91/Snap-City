@@ -4,13 +4,28 @@ angular.module('mvp.statsCtrl',[])
     $scope.numbers = {};
     var stats = [];
     var chartData={
+      "title":{
+        "text": "SKWAATS",
+        "width":150,
+        "height":30,
+        "offset-x": 400,
+        "offset-y":10,
+        "background-color":"gray",
+        "color":"#FFF",
+        "border-radius":"4px",
+        "font-weight":"none"
+      },
       "type":"area",  // Specify your chart type here.
+      "scale-x":{
+         "label":{
+            "text":"Visits"
+        }
+      },
       "series":[{ "values": stats}]
     };
     var initialize = function(){
       EntryFactory.get()
         .then(function(resp){
-          console.log(resp.data, '<-----respdata');
           for(var i = 0; i < resp.data.length; i++){
             stats.push(resp.data[i].squat);
           }

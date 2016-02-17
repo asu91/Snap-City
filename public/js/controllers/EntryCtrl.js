@@ -7,8 +7,8 @@ angular.module('mvp.entryCtrl',[])
     $scope.incrementNumber = function(){
       // EntryFactory.create(JSON.stringify($scope.number));
       // console.log(typeof $scope.number.deadlift)
-      $scope.display.push($scope.number.squat)
-      $scope.total += $scope.number.squat
+      $scope.display.push($scope.number.squat * $scope.number.reps || 1);
+      $scope.total += $scope.number.squat * ($scope.number.reps || 1)
       console.log('triggers')
       // EntryFactory.getQuote();
     }
