@@ -1,0 +1,9 @@
+<div class='jumbotron header'>
+  <form>
+    <input type='number' placeholder='WEIGHT' ng-model='number.weight'>
+    <input type='number' placeholder='REPS' ng-model='number.rep'>
+    <button ng-click='findOneRep()'>CALCULATE</button>
+    <button ng-click='number.weight="" ; number.rep =""; onerepmax=0'>CLEAR</button>
+  </form>
+  <h3>1RM: {{ onerepmax }}</h3>
+</div>
