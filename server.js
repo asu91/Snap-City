@@ -4,14 +4,17 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
-var db = require('./config/db');
+// var db = require('./config/db');
+
+mongoose.connect('mongodb://localhost/MVP');
 
 
 // mongoose.connect(db.url);
 
 app.use(bodyParser.json());
 
-// require('./app/routes')(app);
+require('./app/routes')(app);
+
 
 // app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
 

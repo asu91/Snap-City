@@ -1,0 +1,13 @@
+<div class='jumbotron header'>
+  <form>
+    <input type='number' placeholder='WEIGHT' ng-model='number.weight'>
+    <input type='number' placeholder='REPS' ng-model='number.rep'>
+    <button ng-click='findOneRep()'>CALCULATE</button>
+    <button ng-click='number.weight="" ; number.rep =""; onerepmax=0'>CLEAR</button>
+  </form>
+  <h3>1RM: {{ onerepmax }} lbs</h3>
+  <br/> <br/>
+  <h6>Brzycki, Matt (1998). A Practical Approach To Strength Training. McGraw-Hill.</h6>
+  <h6>Baechle TR, Earle RW, Wathen D (2000). Essentials of Strength Training and Conditioning, 2: 395-425.</h6>
+  <h6>dos Remedios R (2007) Men's Health Power Training, Rodale Inc. 23.</h6>
+</div>

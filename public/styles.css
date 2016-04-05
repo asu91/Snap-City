@@ -1,0 +1,30 @@
+body {
+  background: url('img/gym2.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+img {
+  position: relative;
+  width: 100px;
+  height: auto;
+}
+
+.header {
+  opacity: 0.9;
+}
+
+.bar {
+  background-color: white;
+  opacity: .8
+}
+
+.login {
+  float: right;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+}

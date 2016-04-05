@@ -20,6 +20,21 @@ angular.module('mvp.factory', [])
       .then(function(){
         console.log('POST SUCCESSFUL');
       });
+      return $http.get('/api/entry', function(req, res){
+        if(err){
+          console.error(err);
+        } else {
+          res.json(req.body);
+        }
+      });
+    };
+
+    var create = function(entryData){
+      console.log(entryData, '<---entryData')
+      return $http.post('/api/entry', entryData)
+        .then(function(){
+          console.log('SUCCESS!!')
+        })
     };
 
     var erase = function(id){
@@ -33,10 +48,23 @@ angular.module('mvp.factory', [])
       });
     };
 
+    var getQuote = function(){
+      return $http({
+        method: 'GET',
+        url: 'http://api.forismatic.com/api/1.0/'
+        }).then(function(res){
+          res.status = 200;
+          return res;
+        })
+    };
+
+
     return {
       get: get,
       post: post,
-      erase: erase
+      create: create,
+      erase: erase,
+      getQuote: getQuote
     };
     
   });
