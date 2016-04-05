@@ -29,7 +29,6 @@ angular.module('mvp.statsCtrl',[])
           for(var i = 0; i < resp.data.length; i++){
             stats.push(resp.data[i].squat);
           }
-          // $scope.numbers = resp.data
         })
         .then(function(){
 

@@ -4,5 +4,4 @@ angular.module('mvp.mainCtrl', [])
     var initialize = function(){
       $scope.quote = EntryFactory.getQuote();
     };
-    // initialize();
   });

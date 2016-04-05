@@ -5,17 +5,11 @@ angular.module('mvp.entryCtrl',[])
     $scope.display = [];
     $scope.total = 0;
     $scope.incrementNumber = function(){
-      // EntryFactory.create(JSON.stringify($scope.number));
-      // console.log(typeof $scope.number.deadlift)
       $scope.display.push($scope.number.squat * $scope.number.reps || 1);
       $scope.total += $scope.number.squat * ($scope.number.reps || 1)
-      console.log('triggers')
-      // EntryFactory.getQuote();
     }
     $scope.pushVol = function(){
-      // console.log($scope.total, '<----total')
       var entry = {squat: $scope.total}
-      console.log(entry,'<--entry')
       EntryFactory.create(JSON.stringify(entry));
     }
     $scope.remove = function(index){

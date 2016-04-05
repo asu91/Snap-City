@@ -25,6 +25,4 @@ angular.module('MVP', ['ngRoute', 'mvp.mainCtrl', 'mvp.entryCtrl', 'mvp.factory'
         templateUrl: '/views/onerepmax.html',
         controller: 'OneRep'
       });
-
-    // $locationProvider.html5Mode(true);
   });
